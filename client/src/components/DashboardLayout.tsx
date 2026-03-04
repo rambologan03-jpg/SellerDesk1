@@ -21,15 +21,18 @@ import {
 } from "@/components/ui/sidebar";
 import { getLoginUrl } from "@/const";
 import { useIsMobile } from "@/hooks/useMobile";
-import { LayoutDashboard, LogOut, PanelLeft, Users } from "lucide-react";
+import { BarChart3, LayoutDashboard, LogOut, Package, PanelLeft, Ticket } from "lucide-react";
 import { CSSProperties, useEffect, useRef, useState } from "react";
 import { useLocation } from "wouter";
 import { DashboardLayoutSkeleton } from './DashboardLayoutSkeleton';
 import { Button } from "./ui/button";
 
 const menuItems = [
-  { icon: LayoutDashboard, label: "Page 1", path: "/" },
-  { icon: Users, label: "Page 2", path: "/some-path" },
+    { icon: LayoutDashboard, label: "Dashboard", path: "/" },
+    { icon: Package, label: "Orders", path: "/orders" },
+    { icon: Package, label: "Inventory", path: "/inventory" },
+    { icon: BarChart3, label: "Reports", path: "/reports" },
+    { icon: Ticket, label: "Support", path: "/tickets" },
 ];
 
 const SIDEBAR_WIDTH_KEY = "sidebar-width";
